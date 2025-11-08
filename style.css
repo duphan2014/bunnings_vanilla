@@ -677,10 +677,12 @@ body {
     -webkit-font-smoothing: antialiased;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 16px;
+    text-overflow: ellipsis;   
 }
 
+body > div.content > div > div.bento-child.bento-rec.bento-left > div.bento-left-text > div.button-cta-red {
+    margin-top: 16px;
+}
 
 
 .bento-banner .bento-child:nth-child(2).bento-square.bento-direction-vertical {
@@ -802,7 +804,58 @@ body {
     background-color: rgb(13, 82, 87);
 }
 
+.bento-bottom-item:not(:nth-child(2)) {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .bento-bottom img {
     height: 90px;
     width: 90px;
+}
+
+.carousel {
+    box-sizing: border-box;
+    border-bottom: 0.5px solid rgb(191, 191, 191);
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+    
+    width: 1024px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
 }
