@@ -784,10 +784,25 @@ body {
     margin-bottom: 0px;
 }
 
-.bento-banner .bento-child.bento-rec.bento-bottom {
+.bento-bottom {
     grid-area: bento-bottom;
     border-width: 1px;
     border-style: solid;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px ;
+    color: white;
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 0.325px;
+    line-height: 36px;
+    font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: rgb(13, 82, 87);
 }
 
+.bento-bottom img {
+    height: 90px;
+    width: 90px;
+}
