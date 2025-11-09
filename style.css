@@ -252,6 +252,7 @@ body {
     -webkit-font-smoothing: antialiased;
     box-sizing: content-box;
     height: 100%;
+    
 
     /*
     padding-inline-start: 14px;
@@ -392,6 +393,7 @@ body {
     box-sizing: border-box;
     border-bottom-style: solid;
     border-bottom-color: rgba(191,191,191,1);
+    border-bottom-width: 0.5px;
     letter-spacing: 0.2px;
     line-height: 24px;
 }
@@ -518,6 +520,7 @@ body {
     background-color: rgb(255, 255, 255);
     border-bottom-style: solid;
     border-bottom-color: rgba(191,191,191,1);
+    border-bottom-width: 0.5px;
     height: 24px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -816,18 +819,24 @@ body > div.content > div > div.bento-child.bento-rec.bento-left > div.bento-left
     width: 90px;
 }
 
-.carousel {
+.carousel-wrapper {
     box-sizing: border-box;
     border-bottom: 0.5px solid rgb(191, 191, 191);
     background: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
     
-    width: 1024px;
+    width: 100%;
     height: 56px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.carousel {
+    height: 100%;
+    width: 822px;
     position: relative;
+    overflow: hidden;
 }
 
 .carousel-track {
@@ -837,6 +846,10 @@ body > div.content > div > div.bento-child.bento-rec.bento-left > div.bento-left
     height: 100%;
 }
 
+.carousel-track.no-transition {
+    transition: none;
+}
+
 .slide {
     flex-shrink: 0;
     width: 100%;
@@ -844,16 +857,49 @@ body > div.content > div > div.bento-child.bento-rec.bento-left > div.bento-left
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.slide svg {
+    margin-right: 14px;
+}
+.slide a {
+    text-decoration: underline;
+}
+
+.slide:nth-child(1) {
+}
+
+.slide:nth-child(2) {
+}
+
+.slide:nth-child(3) {
 }
 
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 3rem;
+    height: 3.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.arrow:hover {
+    background-color: rgb(245, 245, 245);
 }
 
 .arrow-left {
     left: 10px;
+    
 }
 
 .arrow-right {
